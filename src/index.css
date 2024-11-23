@@ -1,0 +1,84 @@
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* espacio entre cards */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* personalizamos los card pokemon*/
+.card {
+  text-align: center;
+  border: 10px solid #0f15c9;
+  /* color de fondo de los cards */
+  background: #37cfb8;
+}
+img {
+/*   tamaño de los cards */
+  max-width: 50%;
+  border-radius: 5px;
+}
+
+/* menu cotacto */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  /* padding: 0;
+  margin: 0; */
+  background-color: #d21616;
+  /* centrado el menu con espacios  */
+  justify-content: space-around;
+}
+/* aqui acomoda el menu  */
+.navbar li {
+  position: relative; 
+  margin: 0 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: #e2eee2;
+  font-weight: bold;
+}
+
+.navbar .submenu-list {
+  display: none; /* Ocultar el submenú por defecto */
+  position: absolute;
+  top: 100%; /* Coloca el submenú debajo del elemento padre */
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+/* al pasar el punto muestra el sub menu  */
+.navbar .submenu:hover .submenu-list {
+  display: block; 
+}
+
+.submenu-list li {
+  margin: 0;
+}
+
+.submenu-list a {
+  padding: 10px;
+  display: block;
+  color: #e7dcdc;
+  white-space: nowrap;
+  /* color al menu desplegable */
+  background-color: #d21616;
+  
+}
+
+.submenu-list a:hover {
+  /* color a mostrar cuando pase el puntero */
+  background-color: #26ca45;
+}
+
+
