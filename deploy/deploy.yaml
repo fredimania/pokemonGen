@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apireact
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apireact
+  template:
+    metadata:
+      labels:
+        app: apireact
+    spec:
+      containers:
+        - name: apireact
+          image: davidchalan/react:v1
+          envFrom:
+            - configMapRef:
+                name: app-env-config
+          volumeMounts:
+            - name: auto-logs
+              mountPath: /root/logs
+      volumes:
+        - name: auto-logs
+          persistentVolumeClaim:
+            claimName: auto-pvc
+
+
+
+#               apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: ApiReact
+#   labels:
+#     zone: prod
+#     version: v1
+# spec:
+#   containers:
+#     - name: ApiReact
+#       image: frmehu/react:v1

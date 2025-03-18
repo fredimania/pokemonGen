@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-env-config
+data:
+  CONTEXTO: /home/davidchalan/HLC-24-25/Caronte
+  AUTOR: davidchalan
+  TZ: Europe/Madrid
+  PROYECTO: HLC-apipokemon
+  GITHUB: https://github.com/DavidChalan/HLC-apipokemon.git
+  USUARIO: davidchalan
+  PASSWD: davidchalan
+  HOSTNAME: HLC-apipokemon
+  PORT_SSH: "45678"
+  PORT_ORIGEN: "8082"
